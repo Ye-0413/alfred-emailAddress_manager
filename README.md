@@ -1,6 +1,9 @@
 # Alfred Email Address Manager
 
-A simple Alfred workflow to quickly access and copy your email addresses.
+A simple Alfred workflow to quickly access and insert your email addresses.
+If you think this is useful, please  ❤️Star❤️ this project.
+
+![screenshot](/screenshot.png)
 
 ## Features
 
@@ -23,6 +26,7 @@ A simple Alfred workflow to quickly access and copy your email addresses.
 ## Customization
 
 You can customize your email addresses in two ways:
+[]
 
 ### 1. Through Alfred Workflow Settings
 
