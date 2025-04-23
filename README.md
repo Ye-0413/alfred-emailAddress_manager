@@ -14,7 +14,7 @@ If you think this is useful, please  ❤️Star❤️ this project.
 
 ## Installation
 
-1. Download the latest release from the [releases page](https://github.com/jiaye/alfred-email-addresses/releases)
+1. Download the latest release from the [releases page](https://github.com/Ye-0413/alfred-emailAddress_manager/alfred-email-addresses.alfredworkflow)
 2. Double-click the downloaded `.alfredworkflow` file to install
 
 ## Usage
