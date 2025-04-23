@@ -34,13 +34,13 @@ You can customize your email addresses in two ways:
 2. Go to Workflows and select "Email Address Manager"
 3. Click the [𝓍] icon in the top right to open workflow configuration
 4. Edit the `EMAIL_CONFIG` environment variable using this format:
-   
+
    ```
    Name1:email1@example.com,Name2:email2@example.com,Name3:email3@example.com
    ```
    
    Each name-email pair is separated by a colon (`:`), and pairs are separated by commas (`,`).
-
+![screenshot](/Configuration.png)
 ### 2. By Editing the Code
 
 To add or modify email addresses directly in the code, edit the `GetEmailAddresses()` function in `internal/emailaddresses.go`.
