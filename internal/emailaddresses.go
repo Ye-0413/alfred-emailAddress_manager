@@ -1,22 +1,47 @@
 package internal
 
+import (
+	"os"
+	"strings"
+)
+
 // EmailAddress represents a stored email address with a name
 type EmailAddress struct {
 	Name  string
 	Email string
 }
 
-// GetEmailAddresses returns a list of predefined email addresses
+// GetEmailAddresses returns email addresses from environment configuration
 func GetEmailAddresses() []EmailAddress {
-	return []EmailAddress{
-		{Name: "PolyU Student Number", Email: "24052775r@connect.polyu.hk"},
-		{Name: "PolyU Student Name", Email: "ye-aimmeng.jia@connect.polyu.hk"},
-		{Name: "PolyU Staff", Email: "aimmeng-ye.jia@polyu.edu.hk"},
-		{Name: "Gmail", Email: "aimmeng.life@gmail.com"},
-		{Name: "QQ", Email: "1149042251@qq.com"},
-		{Name: "Academic", Email: "academic-ye.jia@hotmail.com"},
-		{Name: "anything", Email: "anything@jiaye.hk.cn"},
-		{Name: "163", Email: "jy_academic@163.com"},
-		// Add more email addresses as needed
+	var emails []EmailAddress
+
+	// Try to get email configuration from environment variable
+	emailConfig := os.Getenv("EMAIL_CONFIG")
+
+	// If environment variable is set, parse it
+	if emailConfig != "" {
+		emailPairs := strings.Split(emailConfig, ",")
+
+		for _, pair := range emailPairs {
+			// Split each pair into name and email
+			parts := strings.SplitN(pair, ":", 2)
+			if len(parts) == 2 {
+				emails = append(emails, EmailAddress{
+					Name:  parts[0],
+					Email: parts[1],
+				})
+			}
+		}
+	} else {
+		// Fallback to example email addresses if no configuration is provided
+		emails = []EmailAddress{
+			{Name: "Personal", Email: "your.name@example.com"},
+			{Name: "Work", Email: "work@example.com"},
+			{Name: "School", Email: "student@university.edu"},
+			{Name: "Gmail Example", Email: "example@gmail.com"},
+			{Name: "Alternative", Email: "alternative@example.com"},
+		}
 	}
+
+	return emails
 }

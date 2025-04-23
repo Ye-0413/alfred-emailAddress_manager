@@ -4,7 +4,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/crispgm/alfred-latex-table/internal"
+	"github.com/jiaye/alfred-email-addresses/internal"
 
 	aw "github.com/deanishe/awgo"
 )

@@ -116,6 +116,11 @@
 			<integer>220</integer>
 		</dict>
 	</dict>
+	<key>variables</key>
+	<dict>
+		<key>EMAIL_CONFIG</key>
+		<string>Personal:your.name@example.com,Work:work@example.com,School:student@university.edu,Gmail:example@gmail.com,Alternative:alternative@example.com</string>
+	</dict>
 	<key>webaddress</key>
 	<string>https://github.com/jiaye/alfred-email-addresses</string>
 </dict>
